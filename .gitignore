@@ -1,4 +1,4 @@
 # bỏ qua các file cài đặt
 Application/
-!FileSetup/
+# !FileSetup/
 !Scripts/
