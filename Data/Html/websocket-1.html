@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script>
+        var socket = io('http://localhost:5000');
+
+        socket.on('connect', function() {
+            console.log('Connected to server with socket id:', socket.id);
+            // Gửi socket ID đến server để đăng nhập
+            // socket.emit('login', { user_id: '999', socket_id: socket.id });
+            // socketio.emit('register', {'user_id': user_id, 'socket_id': socketio.sid})
+            socket.emit('register', {'user_id': "12345", 'socket_id': socket.sid})
+        });
+
+        socket.on('notification', function(data) {
+            alert('Notification: ' + data.message);
+        });
+    </script>
+</head>
+<body>
+    <h1>Notification Example</h1>
+</body>
+</html>

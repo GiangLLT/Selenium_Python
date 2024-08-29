@@ -1,0 +1,1 @@
+Mở Command Palette (Ctrl+Shift+P) và chọn Python: Select Interpreter, sau đó chọn đúng interpreter nơi bạn đã cài đặt pywinauto.
